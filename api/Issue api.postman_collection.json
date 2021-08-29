@@ -1,0 +1,477 @@
+# #backend #api
+
+{
+	"info": {
+		"_postman_id": "80803584-d205-456d-94ae-d3d7987db922",
+		"name": "IssueAPI",
+		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:2000/api/issue/getIssues",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMVF6OUVmbDRKIiwiaWF0IjoxNjE2NDc4ODU1LCJleHAiOjE2MTY3MzgwNTV9.0b6be6p_-75DpL6tIUxR4NpxYq-ih7pCYUSRpBZwhu9tVAI2PhEctK5Im7lwGriw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:2000/api/issue/getIssues",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"issue",
+						"getIssues"
+					]
+				},
+				"description": "Getting the list of issues"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:2000/api/issue/getIssues",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"issue",
+								"getIssues"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:2000/api/issue/getIssue/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMVF6OUVmbDRKIiwiaWF0IjoxNjE2NDc4ODU1LCJleHAiOjE2MTY3MzgwNTV9.0b6be6p_-75DpL6tIUxR4NpxYq-ih7pCYUSRpBZwhu9tVAI2PhEctK5Im7lwGriw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:2000/api/issue/getIssue/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"issue",
+						"getIssue",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "605988a5ab6b662b649856ae"
+						}
+					]
+				},
+				"description": "Getting a selected issue"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:2000/api/issue/getIssue/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"issue",
+								"getIssue",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:2000/api/issue/addIssue",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMVF6OUVmbDRKIiwiaWF0IjoxNjE2NDc4ODU1LCJleHAiOjE2MTY3MzgwNTV9.0b6be6p_-75DpL6tIUxR4NpxYq-ih7pCYUSRpBZwhu9tVAI2PhEctK5Im7lwGriw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"allocated_user_id\": \"sfasdfsdf\",\r\n    \"description\": \"String\",\r\n    \"school_id\": 5,\r\n    \"status\": \"1\",\r\n    \"title\": \"String\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/api/issue/addIssue",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"issue",
+						"addIssue"
+					]
+				},
+				"description": "Create a new issue"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:2000/api/issue/addIssue",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"issue",
+								"addIssue"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:2000/api/issue/deleteIssue/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMVF6OUVmbDRKIiwiaWF0IjoxNjE2NDc4ODU1LCJleHAiOjE2MTY3MzgwNTV9.0b6be6p_-75DpL6tIUxR4NpxYq-ih7pCYUSRpBZwhu9tVAI2PhEctK5Im7lwGriw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:2000/api/issue/deleteIssue/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"issue",
+						"deleteIssue",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "60598a1e48b7683ce02ea5a5"
+						}
+					]
+				},
+				"description": "Delete a selected issue"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:2000/api/issue/deleteIssue/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"issue",
+								"deleteIssue",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:2000/api/issue/editIssue",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMVF6OUVmbDRKIiwiaWF0IjoxNjE2NDc4ODU1LCJleHAiOjE2MTY3MzgwNTV9.0b6be6p_-75DpL6tIUxR4NpxYq-ih7pCYUSRpBZwhu9tVAI2PhEctK5Im7lwGriw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"605988a5ab6b662b649856ae\",\r\n    \"allocated_user_id\": \"sfasdfsdf\",\r\n    \"description\": \"String111111111\",\r\n    \"school_id\": 5,\r\n    \"status\": \"1\",\r\n    \"title\": \"String\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/api/issue/editIssue",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"issue",
+						"editIssue"
+					]
+				},
+				"description": "Updating the Issue"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:2000/api/issue/editIssue",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"issue",
+								"editIssue"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:2000/api/issue/changeStatus",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMVF6OUVmbDRKIiwiaWF0IjoxNjE2NDc4ODU1LCJleHAiOjE2MTY3MzgwNTV9.0b6be6p_-75DpL6tIUxR4NpxYq-ih7pCYUSRpBZwhu9tVAI2PhEctK5Im7lwGriw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"605988a5ab6b662b649856ae\",\r\n    \"status\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/api/issue/changeStatus",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"issue",
+						"changeStatus"
+					]
+				},
+				"description": "Updating the status of issue"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:2000/api/issue/changeStatus",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"issue",
+								"changeStatus"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:2000/api/issue/addComment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMVF6OUVmbDRKIiwiaWF0IjoxNjE2NDc4ODU1LCJleHAiOjE2MTY3MzgwNTV9.0b6be6p_-75DpL6tIUxR4NpxYq-ih7pCYUSRpBZwhu9tVAI2PhEctK5Im7lwGriw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"issue_id\": \"605988a5ab6b662b649856ae\",\r\n    \"title\": \"new issue\",\r\n    \"message\": \"sfasfdasdfasdfasdf \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2000/api/issue/addComment",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"issue",
+						"addComment"
+					]
+				},
+				"description": "Add a new comment on issue"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:2000/api/issue/addComment",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"api",
+								"issue",
+								"addComment"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	]
+}
